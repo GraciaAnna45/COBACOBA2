@@ -6,7 +6,7 @@ st.title("DATA OVERVIEW")
 
 @st.cache_data
 def load_monthly():
-    df = pd.read_csv("monthly_attributes_weighted_filtered.csv")
+    df = pd.read_excel("monthly_attributes_weighted_filtered.xlsx")
 
     # Normalize column names
     df.columns = df.columns.str.lower()
@@ -108,3 +108,4 @@ fig_mention.update_layout(xaxis_title="Month", yaxis_title="Total Mention", heig
 st.plotly_chart(fig_mention, width="stretch")
 
 st.markdown("> Halaman ini menjawab: **Apakah rating dan sentiment cenderung naik, turun, atau stagnan sepanjang tahun?**")
+
