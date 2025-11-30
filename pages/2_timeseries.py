@@ -10,7 +10,7 @@ st.title("DYNAMIC KANO EVOLUTION")
 # ----------------------------------------------------------
 @st.cache_data
 def load_kano():
-    df = pd.read_csv("kano_dynamic.csv")
+    df = pd.read_excel("kano_dynamic.xlsx")
     df["year"] = df["month"].str[:4].astype(int)
     return df
 
@@ -185,3 +185,4 @@ High-volatility attributes indicate changing customer expectations or inconsiste
 Stable attributes show consistent customer perception — customers know what to expect.
 </div>
 """, unsafe_allow_html=True)
+
