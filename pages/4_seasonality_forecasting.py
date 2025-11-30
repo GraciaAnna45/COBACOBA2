@@ -12,7 +12,7 @@ st.title("SEASONALITY & FORECASTING")
 # ----------------------------------------------------------
 @st.cache_data
 def load_monthly():
-    df = pd.read_csv("monthly_attributes_weighted_filtered.csv")
+    df = pd.read_excel("monthly_attributes_weighted_filtered.xlsx")
     df = df.sort_values("month").reset_index(drop=True)
     df["t"] = np.arange(len(df))
     return df
@@ -150,3 +150,4 @@ st.markdown(f"""
 {action}
 </div>
 """, unsafe_allow_html=True)
+
