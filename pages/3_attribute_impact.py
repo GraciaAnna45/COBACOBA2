@@ -6,7 +6,7 @@ st.title("ATTRIBUTE IMPACT (β⁺ / β⁻)")
 
 @st.cache_data
 def load_kano():
-    df = pd.read_csv("kano_dynamic.csv")
+    df = pd.read_excel("kano_dynamic.xlsx")
     df["year"] = df["month"].str[:4].astype(int)
     return df
 
@@ -58,3 +58,4 @@ st.markdown("""
 - Semakin besar β⁺ → peningkatan atribut tersebut (sentiment positif) semakin kuat menaikkan rating.
 - Atribut dengan β⁺ tertinggi → kandidat fitur yang bisa dijadikan *delighter* atau prioritas utama peningkatan kualitas.
 """)
+
